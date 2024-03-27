@@ -24,6 +24,11 @@ static int constantInstruction(const char* name, Chunk* chunk, int offset) {
   return offset + 2;
 }
 
+static int getLine(Chunk* chunk, int index){
+  if(index > 0 && chunk->lines[index] > 128){
+
+  }
+}
 int disassembleInstruction(Chunk* chunk, int offset) {
   printf("%04d ", offset);
   if (offset > 0 &&
